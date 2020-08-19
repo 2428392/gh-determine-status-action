@@ -1,0 +1,16 @@
+name: "Determine Status"
+description: "Return 'success' on 'success', 'failure' for anything else."
+author: "Brian Kurtz"
+branding:
+  icon: briefcase
+  color: orange
+inputs:
+  outcome:
+    description: The outcome to test
+    required: true
+outputs:
+  status:
+    description: success or failure status
+runs:
+  using: "node12"
+  main: "dist/index.js"

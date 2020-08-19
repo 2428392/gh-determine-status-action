@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  [pull_request, push]
+
+jobs:
+  buildAndTest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - uses: actions/checkout@v2
+      - name: Install Depenencies
+        run: yarn install
+      - name: test
+        run: yarn test
